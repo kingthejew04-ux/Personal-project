@@ -99,7 +99,7 @@ public class AutoRtpClient implements ClientModInitializer {
 	private static void message(String text) {
 		Minecraft client = Minecraft.getInstance();
 		if (client.player != null) {
-			client.player.displayClientMessage(Component.literal("[AutoRTP] " + text), false);
+			client.player.sendSystemMessage(Component.literal("[AutoRTP] " + text));
 		}
 	}
 }
